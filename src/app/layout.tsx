@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "3D Motion Designer with 5+ years of experience. Specializing in product animation, video explainers, and motion graphics for brands and agencies.",
   metadataBase: new URL("https://karpau.work"),
   openGraph: {
-    title: "Maksim Karpau — Motion Designer & 3D Generalist",
+    title: "Maksim Karpau | Motion Designer & 3D Generalist",
     description: "3D Motion Designer with 5+ years of experience. Specializing in product animation, video explainers, and motion graphics for brands and agencies.",
     url: "https://karpau.work",
     siteName: "Maksim Karpau Portfolio",
