@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maksim Karpau — Motion Designer & 3D Generalist",
+    title: "Maksim Karpau | Motion Designer & 3D Generalist",
     description: "3D Motion Designer with 5+ years of experience. Specializing in product animation, video explainers, and motion graphics for brands and agencies.",
     images: ["/og-image.jpg"],
   },
