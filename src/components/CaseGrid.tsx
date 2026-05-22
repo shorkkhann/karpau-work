@@ -6,7 +6,7 @@ const cases = [
     client: "Top Tier Authentics",
     year: "2024",
     tag: ["3D", "Motion", "Automation"],
-    covers: ["/cases/01/cover.jpg", "/cases/01/cover_2.jpg", "/cases/01/cover_3.jpg"],
+    covers: ["/cases/01/cover.webp", "/cases/01/cover_2.webp", "/cases/01/cover_3.webp"],
     caseUrl: "https://behance.net/shorkkhann",
     caseLabel:"View on Behance" },
   
@@ -15,7 +15,7 @@ const cases = [
     client: "Digital Product",
     year: "2026",
     tag: ["3D", "Motion"],
-    covers: ["/cases/02/cover.jpg", "/cases/02/cover_2.jpg", "/cases/02/cover_3.jpg", "/cases/02/cover_4.jpg"],
+    covers: ["/cases/02/cover.webp", "/cases/02/cover_2.webp", "/cases/02/cover_3.webp", "/cases/02/cover_4.webp"],
     caseUrl: "https://shorkkhann.gumroad.com/",
     caseLabel:"View on Gumroad" },
     
@@ -24,7 +24,7 @@ const cases = [
     client: "Sports Illustrated",
     year: "2025",
     tag: ["3D", "Motion"],
-    covers: ["/cases/02/cover.jpg", "/cases/02/cover_2.jpg", "/cases/02/cover_3.jpg", "/cases/02/cover_4.jpg"]},
+    covers: ["/cases/03/cover.webp", "/cases/03/cover_2.webp", "/cases/03/cover_3.webp"]},
 
     { id: 4,
     title: "Sci-Fi Dragonfly Cinematic",
@@ -40,7 +40,7 @@ const cases = [
     client: "Studio Auctions",
     year: "2025",
     tag: ["3D", "Motion"],
-    covers: ["/cases/05/cover.webp", "/cases/05/cover_2.webp", "/cases/05/cover_3.webp", "/cases/05/cover_4.webp"],},
+    covers: ["/cases/05/cover.webp", "/cases/05/cover_2.webp", "/cases/05/cover_3.webp", "/cases/05/cover_4.webp", "/cases/05/cover_5.webp"]},
 
     { id: 6,
     title: "Drift 3.0",
