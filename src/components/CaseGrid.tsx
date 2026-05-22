@@ -6,7 +6,7 @@ const cases = [
     client: "Top Tier Authentics",
     year: "2024",
     tag: ["3D", "Motion", "Automation"],
-    covers: ["/cases/01/cover.webp", "/cases/01/cover_2.webp", "/cases/01/cover_3.webp"],
+    covers: ["/cases/01/cover.webp", "/cases/01/cover_2.webp", "/cases/01/cover_3.webp", "/cases/01/cover_4.webp"],
     caseUrl: "https://behance.net/shorkkhann",
     caseLabel:"View on Behance" },
   
