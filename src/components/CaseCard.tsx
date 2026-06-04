@@ -28,12 +28,20 @@ export default function CaseCard({ item }: { item: Case }) {
 
   return (
     <div className="group relative flex flex-col gap-2 rounded-xl border border-neutral-200 p-4 transition-colors hover:border-neutral-400 dark:border-neutral-800 dark:hover:border-neutral-600">
-      <div onClick={handleCoverClick} className="relative aspect-video w-full overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-900 cursor-pointer">
-        {item.covers.map((src, i) => (
-          <div key={i} className="absolute inset-0 transition-opacity duration-400 ease-in-out" style={{ opacity: i === coverIndex ? 1 : 0 }}>
-            <Image src={src} alt={`${item.title} — cover ${i + 1}`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-          </div>
-        ))}
+      <div 
+  onClick={handleCoverClick} 
+  className="relative aspect-video w-full overflow-hidden rounded-lg bg-neutral-100 dark:bg-neutral-900 cursor-pointer transform translate-z-0"
+  style={{ WebkitMaskImage: "-webkit-radial-gradient(white, black)" }}
+>
+  {item.covers.map((src, i) => (
+    <div 
+      key={i} 
+      className="absolute inset-0 transition-opacity duration-400 ease-in-out will-change-opacity" // Добавили will-change-opacity
+      style={{ opacity: i === coverIndex ? 1 : 0 }}
+    >
+      <Image src={src} alt={`${item.title} — cover ${i + 1}`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+    </div>
+  ))}
 
         {item.caseUrl && (
           <a href={item.caseUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-[5px] transition-opacity duration-400 ease-in-out" style={{ opacity: showLink ? 1 : 0, pointerEvents: showLink ? "auto" : "none" }}>

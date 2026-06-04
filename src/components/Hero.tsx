@@ -8,9 +8,23 @@ export default function Hero() {
         <p className="text-base text-neutral-500 dark:text-neutral-400">Creating high quality 3D animations and dynamic motion graphics.</p>
       </div>
 
-      <div className="relative w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900" style={{ aspectRatio: "16/9", backgroundImage: `url(https://vumbnail.com/${vimeoId}.jpg)`, backgroundSize: "cover", backgroundPosition: "center" }}>
-        <iframe src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0`} className="absolute inset-0 w-full h-full border-0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen />
-      </div>
+      <div 
+  className="relative w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 isolate" 
+  style={{ 
+    aspectRatio: "16/9", 
+    backgroundImage: `url(https://vumbnail.com/${vimeoId}.jpg)`, 
+    backgroundSize: "cover", 
+    backgroundPosition: "center",
+    WebkitMaskImage: "-webkit-radial-gradient(white, black)"
+  }}
+>
+  <iframe 
+    src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0`} 
+    className="absolute inset-0 w-full h-full border-0 rounded-xl"
+    allow="autoplay; fullscreen; picture-in-picture" 
+    allowFullScreen 
+  />
+</div>
     </section>
   );
 }
