@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Hero() {
   const vimeoId = "1193695685";
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [showThumbnail, setShowThumbnail] = useState(true);
 
   return (
     <section id="hero" className="flex flex-col gap-8">
@@ -16,7 +16,8 @@ export default function Hero() {
         className="relative w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 isolate" 
         style={{ 
           aspectRatio: "16/9", 
-          backgroundImage: isVideoLoaded ? "none" : `url(https://vumbnail.com/${vimeoId}.jpg)`, 
+         
+          backgroundImage: showThumbnail ? `url(https://vumbnail.com/${vimeoId}.jpg)` : "none", 
           backgroundSize: "cover", 
           backgroundPosition: "center",
           WebkitMaskImage: "-webkit-radial-gradient(white, black)"
@@ -27,7 +28,11 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full border-0 rounded-xl"
           allow="autoplay; fullscreen; picture-in-picture" 
           allowFullScreen 
-          onLoad={() => setIsVideoLoaded(true)}
+          onLoad={() => {
+            setTimeout(() => {
+              setShowThumbnail(false);
+            }, 2000);
+          }}
         />
       </div>
     </section>
