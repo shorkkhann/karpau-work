@@ -7,7 +7,7 @@ const cases = [
     year: "2024",
     tag: ["3D", "Motion", "Automation"],
     covers: ["/cases/01/cover.webp", "/cases/01/cover_2.webp", "/cases/01/cover_3.webp", "/cases/01/cover_4.webp"],
-    caseUrl: "https://behance.net/shorkkhann",
+    caseUrl: "https://www.behance.net/gallery/246411903/3D-Product-Showcase-Sports-Memorabilia",
     caseLabel:"View on Behance" },
   
     { id: 2,
