@@ -1,5 +1,9 @@
+"use client";
+import { useState } from "react";
+
 export default function Hero() {
   const vimeoId = "1193695685";
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   return (
     <section id="hero" className="flex flex-col gap-8">
@@ -9,22 +13,23 @@ export default function Hero() {
       </div>
 
       <div 
-  className="relative w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 isolate" 
-  style={{ 
-    aspectRatio: "16/9", 
-    backgroundImage: `url(https://vumbnail.com/${vimeoId}.jpg)`, 
-    backgroundSize: "cover", 
-    backgroundPosition: "center",
-    WebkitMaskImage: "-webkit-radial-gradient(white, black)"
-  }}
->
-  <iframe 
-    src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0`} 
-    className="absolute inset-0 w-full h-full border-0 rounded-xl"
-    allow="autoplay; fullscreen; picture-in-picture" 
-    allowFullScreen 
-  />
-</div>
+        className="relative w-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 isolate" 
+        style={{ 
+          aspectRatio: "16/9", 
+          backgroundImage: isVideoLoaded ? "none" : `url(https://vumbnail.com/${vimeoId}.jpg)`, 
+          backgroundSize: "cover", 
+          backgroundPosition: "center",
+          WebkitMaskImage: "-webkit-radial-gradient(white, black)"
+        }}
+      >
+        <iframe 
+          src={`https://player.vimeo.com/video/${vimeoId}?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0`} 
+          className="absolute inset-0 w-full h-full border-0 rounded-xl"
+          allow="autoplay; fullscreen; picture-in-picture" 
+          allowFullScreen 
+          onLoad={() => setIsVideoLoaded(true)}
+        />
+      </div>
     </section>
   );
 }
